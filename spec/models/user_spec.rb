@@ -1,13 +1,16 @@
 require 'rails_helper'
 RSpec.describe User, type: :model do
-  before do
-    @user = FactoryBot.build(:user)
-  end
-
+   before do
+      @user = FactoryBot.build(:user)
+   end
+   # binding.pry # /error_message 検出
+   # bundle exec rspec spec/models/user_spec.rb 
+   # @user.errors
+   # @user.errors.full_messages
+   
   describe 'ユーザー新規登録' do
     it 'nickname、email、password、password_confirmation、first_name、last_name、first_name_ruby、last_name_ruby、birth_dateが存在すれば登録できること' do
       expect(@user).to be_valid
-      # binding.pry # /error_message 検出
     end
 
     it 'nicknameが空だと登録できない' do

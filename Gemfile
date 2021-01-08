@@ -34,6 +34,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'# RSpecでテストコードを書く準備
   gem 'factory_bot_rails'
   # インスタンスをまとめることができる
+  gem 'faker'
+  # 意図に応じたランダムな値を生成
 end
 
 group :development do
