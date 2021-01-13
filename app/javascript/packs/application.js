@@ -8,6 +8,7 @@ require("@rails/ujs").start()
 // 画面遷移を高速化するGem
 require("@rails/activestorage").start()
 require("channels")
+require("../product_price");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

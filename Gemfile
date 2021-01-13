@@ -65,3 +65,11 @@ gem 'devise'
 
 gem 'pry-rails'
 # binding.pryを使うため
+
+gem 'mini_magick'
+# ImageMagickの機能をRubyで扱えるようにしてくれるGem
+gem 'image_processing', '~> 1.2'
+# 画像サイズを調整する機能を提供するGem
+
+gem 'active_hash'
+# 都道府県名などの変更されないデータをモデルファイル内に直接記述することで、データベースへ保存せずにデータを取り扱うことができるGem
