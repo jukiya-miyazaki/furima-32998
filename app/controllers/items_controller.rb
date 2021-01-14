@@ -2,6 +2,9 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
   def index
+    @items = Item.all.order(id: "DESC")
+    # idをDESC（降順）新しい物が一番上
+    # 反対（昇順）はASC
   end
 
   def new
