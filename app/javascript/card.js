@@ -22,6 +22,7 @@ const pay = () => {
     Payjp.createToken(card, (status, response) => {
       if (status == 200) {
         const token = response.id;
+  
         // カード情報をPAY.JP側に送りトークン化する
         // アロー関数の引数 = status,response
         const renderDom = document.getElementById("charge-form");

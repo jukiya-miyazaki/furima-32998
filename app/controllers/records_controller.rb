@@ -1,10 +1,10 @@
 class RecordsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :create]
+  before_action :authenticate_user!, only: [:index, :create]
 
   def index
     @item = Item.find(params[:item_id])
     # @record = Record.find_by(item_id: @item.id)
-    if current_user.id == @item.user_id && @item.record.id.exists?
+    if current_user.id == @item.user_id && @item.record.present?
       # カレントユーザーがitemの出品者だったら
       # 売却済みの商品だったら
       redirect_to root_path
