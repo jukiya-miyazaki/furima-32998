@@ -121,7 +121,6 @@ RSpec.describe HomeObject, type: :model do
       it 'item_idが空だと登録できない' do
         @home_object.item_id = nil
         @home_object.valid?
-        binding.pry
         expect(@home_object.errors.full_messages).to include("Item can't be blank")
       end
       # user_id,item_id
