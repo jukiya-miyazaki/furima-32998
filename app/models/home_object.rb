@@ -17,6 +17,10 @@ class HomeObject
     validates :phone_number, format: { with: /\A\d{11}\z/, message: 'を入力してください' }
     # 電話番号
     validates :token
+    
+    # フォームオブジェクトでは直接アソシエーションを組んでいないためにバリデーションが必要
+    validates :user_id
+    validates :item_id
   end
 
   # 各テーブルにデータを保存する処理

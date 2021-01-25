@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe HomeObject, type: :model do
   before do
-    @home_object = FactoryBot.build(:home_object)
-  end
+    @user = FactoryBot.create(:user)
+    @item = FactoryBot.create(:item)
+    @home_object = FactoryBot.build(:home_object, user_id: @user.id , item_id: @item.id)
+   end
   # binding.pry # /error_message 検出
   # bundle exec rspec spec/models/home_object_spec.rb
   # @home_object.errors
@@ -109,6 +111,20 @@ RSpec.describe HomeObject, type: :model do
         expect(@home_object.errors.full_messages).to include("Token can't be blank")
       end
       # token
+
+      # user_id,item_id
+      it 'user_idが空だと登録できない' do
+        @home_object.user_id = nil
+        @home_object.valid?
+        expect(@home_object.errors.full_messages).to include("User can't be blank")
+      end
+      it 'item_idが空だと登録できない' do
+        @home_object.item_id = nil
+        @home_object.valid?
+        binding.pry
+        expect(@home_object.errors.full_messages).to include("Item can't be blank")
+      end
+      # user_id,item_id
     end
   end
 end
