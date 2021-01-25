@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-// load全て読み込まれた後に発火
+// load全て読み込まれた後に発火。他のページにも反映
   const priceInput = document.getElementById("item-price");
   // 金額を入力したときに画面上に動きがあった要素を示すidセレクタ
   priceInput.addEventListener("input", () => {

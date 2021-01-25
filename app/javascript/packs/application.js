@@ -8,6 +8,7 @@ require("@rails/ujs").start()
 // 画面遷移を高速化するGem
 require("@rails/activestorage").start()
 require("channels")
+require("../card")
 require("../product_price");
 
 
