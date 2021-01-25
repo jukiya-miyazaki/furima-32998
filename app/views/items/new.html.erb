@@ -50,12 +50,12 @@
           カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:product_category_id, ProductCategory.all, :id, :name, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:product_category_id, ProductCategory.all, :id, :name, {},{class:"select-box", id:"item-category"}) %>
         <div class="weight-bold-text">
           商品の状態
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:product_condition_id, ProductCondition.all, :id, :name, {class:"select-box", id:"item-sales-status"}) %>
+        <%= f.collection_select(:product_condition_id, ProductCondition.all, :id, :name, {},{class:"select-box", id:"item-sales-status"}) %>
       </div>
     </div>
     <%# /商品の詳細 %>
