@@ -3,7 +3,7 @@ class RecordsController < ApplicationController
   before_action :set_item, only: [:index, :create]
 
   def index
-    if current_user.id == @item.user_id && @item.record.present?
+    if current_user.id == @item.user_id || @item.record.present?
       # カレントユーザーがitemの出品者だったら
       # 売却済みの商品だったら
       redirect_to root_path

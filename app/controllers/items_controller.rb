@@ -53,6 +53,6 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless @item.user == current_user
+    redirect_to action: :index unless @item.user == current_user || @item.record.present?
   end
 end
