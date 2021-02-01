@@ -4,8 +4,8 @@ class RecordsController < ApplicationController
 
   def index
     if current_user.id == @item.user_id || @item.record.present?
-      # カレントユーザーがitemの出品者だったら
-      # 売却済みの商品だったら
+      # カレントユーザーがitemの出品者だったらまずい
+      # 売却済みの商品だったらまずい
       redirect_to root_path
     else
       @record_ho = HomeObject.new
