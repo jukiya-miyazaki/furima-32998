@@ -60,7 +60,7 @@
 | prefecture_id   | integer    | null: false                    | <!-- 都道府県 -->
 | municipalities  | string     | null: false                    | <!-- 市町村 -->
 | address         | string     | null: false                    | <!-- 番地 -->
-| phone_number    | string     | null: false                    | <!-- 電話番号 -->
+| phone_number    | string     | null: false                    | <!-- 電話番号 -->
 | building_number | string     |                                | <!-- 建物番号 -->
 | record          | references | null: false, foreign_key: true |
 ### Association
